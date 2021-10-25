@@ -1,5 +1,5 @@
 CC=gcc
-SOURCES= main.c vector_3d.c
+SOURCES= main.c vector/vector_3d.c
 OBJECTS=$(SOURCES:.c=.o)
 NAME=program
 
@@ -10,4 +10,4 @@ $(NAME): $(OBJECTS)
 	$(CC) -c $^ -o $@
 
 clean:
-	rm -f *.o $(NAME)
+	rm -f $(OBJECTS) $(NAME)
